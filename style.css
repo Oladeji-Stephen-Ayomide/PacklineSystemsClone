@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Styles for the heading section */
+
+#header {
+  position: relative;
+  background: linear-gradient(rgba(14, 1, 24, 0.8), rgba(7, 0, 17, 0.651)),
+    url("https://test.packlinesystems.com/wp-content/uploads/2025/08/pexels-photo-1181330-1181330-scaled.jpg")
+      no-repeat center center/cover;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1em;
+  font-family: "Poppins", sans-serif;
+}
+
+.logo {
+  padding-left: 4em;
+}
+
+.header_h1 {
+  font-weight: 700;
+}
+
+ul {
+  display: flex;
+  margin-right: 5em;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  list-style-type: none;
+  gap: 20px;
+}
+
+li {
+  padding: 0.4em;
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+#header-text {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  font-size: large; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* info-section */
+
+.info-section {
+  margin-top: 3em;
+}
+
+.complimentary {
+  color: rgb(15, 23, 42);
+  font-size: x-large;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.info-text {
+  font-size: large;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  color: rgb(69, 79, 94);
+  font-family: "Open sans", sans-serif;
+}
