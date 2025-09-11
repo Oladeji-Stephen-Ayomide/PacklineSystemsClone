@@ -125,3 +125,16 @@ button {
   color: rgb(69, 79, 94);
   font-family: "Open sans", sans-serif;
 }
+
+/* ✅ Responsive stack on small screens */
+@media (max-width: 768px) {
+	
+
+  .expertise {
+    grid-template-columns: 1fr; /* stack all items */
+  }
+
+  .half {
+    grid-template-columns: 1fr; /* stack 4 and 5 */
+  }
+}
