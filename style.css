@@ -308,10 +308,55 @@ button {
   margin-top: 0;
 }
 
-
 /* footer */
 .footer {
   background-color: rgb(15, 70, 109);
-  height: 70vh;
+  /* height: 70vh; */
   color: white;
+  display: flex;
+  gap: 5rem;
+  padding: 8em 0 8em 3em;
 }
+
+.footer-remark {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-remark img {
+  width: 13rem;
+}
+
+.footer-remark p {
+  text-align: left;
+  font-size: 1.1rem;
+  max-width: 200px;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.icon {
+  display: flex;
+  flex-direction: row;
+  gap: 0.4em;
+  align-items: center;
+}
+
+.icon img {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+
+.company-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+
