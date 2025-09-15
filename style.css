@@ -1,8 +1,22 @@
+* {
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   scroll-behavior: smooth;
   font-family: "Open Sans", sans-serif;
   text-align: center;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 /* Styles for the heading section */
@@ -13,9 +27,10 @@ body {
     url("https://test.packlinesystems.com/wp-content/uploads/2025/08/pexels-photo-1181330-1181330-scaled.jpg")
       no-repeat center center/cover;
   color: white;
-  height: 100vh;
+  /* background-attachment: fixed; */
+  min-height: 100vh;
   display: flex;
-  min-width: 200px;
+  min-width: 100%;
   justify-content: space-between;
   padding-top: 1em;
   font-family: "Poppins", sans-serif;
@@ -35,7 +50,7 @@ ul {
   justify-content: space-evenly;
   align-items: flex-start;
   list-style-type: none;
-  gap: 20px;
+  gap: 1em;
 }
 
 li {
@@ -95,7 +110,7 @@ button {
 .info-section {
   margin-top: 3em;
   color: rgb(15, 23, 42);
-  font-size: x-large;
+  font-size: 2rem;
 }
 
 .complimentary {
@@ -133,8 +148,18 @@ button {
     grid-template-columns: 1fr; /* stack 4 and 5 */
   }
 
+  #founder h2 {
+    margin-top: 0;
+  }
+
   #founder-info {
     flex-direction: column;
+  }
+
+  #founder,
+  .portfolio h2,
+  .customer {
+    margin-top: 5rem;
   }
 
   #founder-img img,
@@ -142,8 +167,16 @@ button {
     width: 100%;
   }
 
-  #founder p {
-    background-color: red;
+  .portfolioimgs,
+  #svg-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .portfolioimgs div,
+  #svg-container svg {
+    flex: 1 1 1 50%;
+    border-radius: 20px;
   }
 }
 
@@ -153,16 +186,25 @@ button {
   gap: 2em;
 }
 
-#founder h1,
-.portfolio h1 {
+#founder h2,
+.portfolio h2,
+.customer {
   font-size: 3rem;
   font-family: "Poppins", sans-serif;
   color: rgb(15, 23, 42);
 }
 
-#founder,
-.portfolio h1 {
-  margin-top: 5rem;
+.portfolio h2,
+.customer {
+  margin-top: 2em;
+  margin-bottom: 0.2em;
+}
+
+#founder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #founder p {
@@ -171,7 +213,7 @@ button {
   font-size: large;
   text-align: left;
   max-height: fit-content;
-  line-height: 40px;
+  line-height: 2em;
   margin-top: 0;
 }
 
@@ -180,8 +222,10 @@ button {
   margin-bottom: 2em;
 }
 
-.portfolio p {
-  font-size: large;
+.portfolio p,
+.customer-p,
+#quote p {
+  font-size: medium;
   line-height: 1.6;
   max-width: 600px;
   margin: 0 auto 2rem auto;
@@ -192,12 +236,18 @@ button {
 .portfolioimgs {
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 1em;
 }
 
 .portfolioimgs div img {
   max-width: 280px;
   max-height: 280px;
+}
+
+/* button */
+.explore {
+  margin-top: 4em;
 }
 
 #explorebutton {
@@ -207,4 +257,57 @@ button {
   border-radius: 6px;
   text-decoration: none;
   cursor: pointer;
+}
+
+#explorebutton:hover {
+  background-color: rgb(78, 6, 245);
+}
+
+/* SVG */
+#svg-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px rgb(69, 79, 94, 0.205) solid;
+  border-bottom: none;
+}
+
+.svg {
+  border-right: 1px rgba(69, 79, 94, 0.205) solid;
+  padding: 2em;
+}
+
+/* TESTIMONAL */
+.testimonial {
+  background-color: rgb(242, 240, 254);
+  padding: 6em 0;
+}
+
+#quote {
+  display: flex;
+  flex-direction: column;
+}
+
+#quote p {
+  max-width: 700px;
+  font-weight: 500;
+}
+
+.testimonial img {
+  border-radius: 50%;
+}
+
+.testimonial div h3 {
+  color: rgb(69, 79, 94);
+  margin-bottom: 0.6em;
+}
+
+.testimonial div p {
+  color: rgb(69, 79, 94);
+  margin-top: 0;
+}
+
+.footer {
+  width: auto;
+  background-color: (15, 70, 109);
 }
