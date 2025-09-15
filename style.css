@@ -2,6 +2,7 @@ body {
   margin: 0;
   scroll-behavior: smooth;
   font-family: "Open Sans", sans-serif;
+  text-align: center;
 }
 
 /* Styles for the heading section */
@@ -40,7 +41,6 @@ ul {
 li {
   padding: 0.4em;
   flex: 1 1 auto;
-  text-align: center;
 }
 
 #header-text {
@@ -57,14 +57,13 @@ li {
   color: white;
   font-size: 1.5rem;
   font-weight: bold;
-  text-align: center;
   transition: all 0.7s ease;
 }
 
 /* info-section */
 #expertise {
-  text-align: center;
   font-size: 3rem;
+  color: rgb(15, 23, 42);
 }
 
 .expertise {
@@ -97,15 +96,13 @@ button {
   margin-top: 3em;
   color: rgb(15, 23, 42);
   font-size: x-large;
-  text-align: center;
 }
 
 .complimentary {
   font-family: "Poppins", sans-serif;
-  text-align: center;
   display: flex;
   flex-direction: column;
-  padding: 0 2em 0 2em;
+  padding: 2em;
   flex: 0 0 23.5%;
   background-color: rgb(15, 70, 109);
 }
@@ -135,6 +132,19 @@ button {
   .half {
     grid-template-columns: 1fr; /* stack 4 and 5 */
   }
+
+  #founder-info {
+    flex-direction: column;
+  }
+
+  #founder-img img,
+  #founder {
+    width: 100%;
+  }
+
+  #founder p {
+    background-color: red;
+  }
 }
 
 /* founder section */
@@ -143,21 +153,58 @@ button {
   gap: 2em;
 }
 
-#founder h1 {
-  text-align: center;
+#founder h1, .portfolio h1 {
   font-size: 3rem;
   font-family: "Poppins", sans-serif;
   color: rgb(15, 23, 42);
 }
 
-#founder {
+#founder, .portfolio h1 {
   margin-top: 5rem;
 }
 
 #founder p {
   color: rgb(69, 79, 94);
   padding: 0 5rem 0 5rem;
-  font-size: 1.2rem;
+  font-size: large     ;
+  text-align: left;
+  max-height: fit-content;
   line-height: 40px;
   margin-top: 0;
+}
+
+/* portfolio */
+.portfolio {
+  margin-bottom: 2em;
+}
+
+.portfolio p {
+  font-size: large;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  color: rgb(69, 79, 94);
+  font-family: "Open sans", sans-serif;
+}
+
+.portfolioimgs {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.portfolioimgs div img {
+  max-width: 280px;
+  max-height: 280px;
+}
+
+#explorebutton {
+  background-color: rgb(101, 40, 247);
+  color: rgb(255, 255, 255);
+  padding: 0.7rem 1rem 0.7rem 1rem;
+  
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
 }
