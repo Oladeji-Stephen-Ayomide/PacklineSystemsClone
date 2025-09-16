@@ -54,8 +54,13 @@ ul {
 }
 
 li {
-  padding: 0.4em;
-  flex: 1 1 auto;
+  padding: 0.3em;
+  /* flex: 1 1 auto; */
+}
+
+#header ul li a {
+  color: #fff;
+  text-decoration: none;
 }
 
 #header-text {
@@ -136,48 +141,6 @@ button {
   margin: 0 auto 2rem auto;
   color: rgb(69, 79, 94);
   font-family: "Open sans", sans-serif;
-}
-
-/* ✅ Responsive stack on small screens */
-@media (max-width: 800px) {
-  .expertise {
-    grid-template-columns: 1fr; /* stack all items */
-  }
-
-  .half {
-    grid-template-columns: 1fr; /* stack 4 and 5 */
-  }
-
-  #founder h2 {
-    margin-top: 0;
-  }
-
-  #founder-info {
-    flex-direction: column;
-  }
-
-  #founder,
-  .portfolio h2,
-  .customer {
-    margin-top: 5rem;
-  }
-
-  #founder-img img,
-  #founder {
-    width: 100%;
-  }
-
-  .portfolioimgs,
-  #svg-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .portfolioimgs div,
-  #svg-container svg {
-    flex: 1 1 1 50%;
-    border-radius: 20px;
-  }
 }
 
 /* founder section */
@@ -311,11 +274,11 @@ button {
 /* footer */
 .footer {
   background-color: rgb(15, 70, 109);
-  /* height: 70vh; */
   color: white;
   display: flex;
-  gap: 5rem;
-  padding: 8em 0 8em 3em;
+  justify-content: space-evenly;
+  gap: 3rem;
+  padding: 4em 0 4em 0;
 }
 
 .footer-remark {
@@ -338,19 +301,29 @@ button {
 .icon-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 0;
 }
-.icon {
+
+.icon a {
   display: flex;
   flex-direction: row;
   gap: 0.4em;
   align-items: center;
+  color: white;
+  text-decoration: none;
 }
 
-.icon img {
+.icon a img {
   width: 1rem;
   height: 1rem;
-  border-radius: 50%;
+  border-radius: 30%;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
 .company-links {
@@ -359,4 +332,90 @@ button {
   gap: 0;
 }
 
+.company-links li a {
+  color: white;
+  text-decoration: none;
+}
 
+.address {
+  width: 25%;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid rgb(69, 79, 94);
+  margin: 0;
+}
+.copyright {
+  margin: 0;
+  background-color: rgb(15, 70, 109);
+  color: #fff;
+  padding: 2em;
+}
+
+.copyright p {
+  margin: 0;
+}
+
+/* ✅ Responsive stack on small screens */
+@media (max-width: 800px) {
+  .info-section,
+  .portfolio p,
+  .customer-p,
+  .testimonial {
+    padding: 0 3rem 0 3rem;
+  }
+
+  .expertise {
+    grid-template-columns: 1fr; /* stack all items */
+  }
+
+  .half {
+    grid-template-columns: 1fr; /* stack 4 and 5 */
+  }
+
+  #founder h2 {
+    margin-top: 0;
+  }
+
+  #founder-info {
+    flex-direction: column;
+  }
+
+  #founder,
+  .portfolio h2,
+  .customer {
+    margin-top: 5rem;
+  }
+
+  #founder-img img,
+  #founder {
+    width: 100%;
+  }
+
+  .portfolioimgs,
+  #svg-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .svg {
+    max-width: 50%;
+  }
+
+  .portfolioimgs,
+  #svg-container svg {
+    flex: 1 1 1 50%;
+    border-radius: 20px;
+  }
+
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+  }
+
+  .address {
+    width: 50%;
+  }
+}
