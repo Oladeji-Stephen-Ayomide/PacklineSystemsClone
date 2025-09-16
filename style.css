@@ -34,6 +34,7 @@ body {
   justify-content: space-between;
   padding-top: 1em;
   font-family: "Poppins", sans-serif;
+  position: relative;
 }
 
 .logo {
@@ -43,6 +44,20 @@ body {
 .header_h1 {
   font-weight: 700;
 }
+
+.dropdown {
+  max-width: 300px;
+}
+
+.dropdown a {
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  left: 0;
+  background-color: blue;
+}
+
+
 
 ul {
   display: flex;
@@ -151,14 +166,14 @@ button {
 
 #founder h2,
 .portfolio h2,
-.customer {
+.customer h2 {
   font-size: 3rem;
   font-family: "Poppins", sans-serif;
   color: rgb(15, 23, 42);
 }
 
 .portfolio h2,
-.customer {
+.customer h2 {
   margin-top: 2em;
   margin-bottom: 0.2em;
 }
@@ -198,14 +213,15 @@ button {
 
 .portfolioimgs {
   display: flex;
-  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
   justify-content: center;
   gap: 1em;
 }
 
 .portfolioimgs div img {
-  max-width: 280px;
-  max-height: 280px;
+  max-width: 17em;
+  max-height: 17em;
 }
 
 /* button */
@@ -361,7 +377,7 @@ hr {
 @media (max-width: 800px) {
   .info-section,
   .portfolio p,
-  .customer-p,
+  .customer,
   .testimonial {
     padding: 0 3rem 0 3rem;
   }
@@ -384,7 +400,7 @@ hr {
 
   #founder,
   .portfolio h2,
-  .customer {
+  .customer h2 {
     margin-top: 5rem;
   }
 
@@ -397,6 +413,15 @@ hr {
   #svg-container {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .portfolioimgs div {
+    max-width: 50%;
+  }
+
+  .portfolioimgs div img {
+    max-width: 10em;
+    max-height: 10em;
   }
 
   .svg {
