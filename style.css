@@ -39,10 +39,42 @@ body {
 
 .logo {
   padding-left: 4rem;
+  width: 16em;
+}
+
+#header-text {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  font-size: large; */
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.7s ease;
+}
+
+#header-text p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.4em;
+  margin-bottom: 0;
 }
 
 .header_h1 {
   font-weight: 700;
+  font-size: 3em;
+  min-width: 17em;
+  margin-top: 0;
 }
 
 ul {
@@ -64,31 +96,16 @@ li {
   text-decoration: none;
 }
 
-#header-text {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: red;
-  font-size: large; */
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 1.2rem;
-  font-weight: bold;
-  transition: all 0.7s ease;
-}
-
 /* Dropdown Button */
 .dropbtn {
   background-color: rgb(15, 70, 109);
   color: white;
-  padding: 10px;
+  padding: 0.5em;
   border-radius: 1em;
   font-size: 1rem;
   border: none;
+  font-family: "Poppins", sans-serif;
+  transition: all 100ms ease;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -136,6 +153,22 @@ li {
 }
 
 /* info-section */
+.info-section {
+  margin-top: 2em;
+  color: rgb(15, 23, 42);
+  font-size: 1.8em;
+  font-family: "Poppins", sans-serif;
+}
+
+.info-text {
+  font-size: large;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  color: rgb(69, 79, 94);
+  font-family: "Open sans", sans-serif;
+}
+
 #expertise {
   font-size: 3rem;
   color: rgb(15, 23, 42);
@@ -173,11 +206,7 @@ li {
   background-color: gray;
 }
 
-.info-section {
-  margin-top: 3em;
-  color: rgb(15, 23, 42);
-  font-size: 2rem;
-}
+
 
 .complimentary {
   font-family: "Poppins", sans-serif;
@@ -195,14 +224,6 @@ li {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.info-text {
-  font-size: large;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto 2rem auto;
-  color: rgb(69, 79, 94);
-  font-family: "Open sans", sans-serif;
-}
 
 /* founder section */
 #founder-info {
