@@ -177,7 +177,7 @@ li {
   gap: 1.3em;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: 1em 5em 3em 5em;
+  margin: 1em 2em 3em 2em;
   flex-wrap: wrap;
   font-family: "Open sans", sans-serif;
   font-weight: 500;
