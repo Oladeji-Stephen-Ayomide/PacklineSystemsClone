@@ -157,17 +157,17 @@ li {
 
 /* info-section */
 .info-section h2,
-#expertise {
-  margin: 1em auto 1rem auto;
+#expertise, .portfolio h2 {
+  margin: 1em auto 0.6em auto;
   color: rgb(15, 23, 42);
   font-size: 2.7em;
   font-family: "Poppins", sans-serif;
 }
 
-.info-text p {
-  font-size: large;
+.info-text p, .portfolio p {
+  font-size: larger;
   line-height: 1.6;
-  max-width: 50rem;
+  max-width: 53rem;
   margin: 0 auto 4rem auto;
   color: rgb(69, 79, 94);
   font-family: "Open sans", sans-serif;
@@ -200,32 +200,26 @@ li {
   margin-bottom: 0;
 }
 
-.complimentary p, .complimentary button a{
-  font-weight: bold;
-  /* padding-inline: 0.6em; */
-    color: white;
+.complimentary p,
+.activeMore {
+  padding-inline: 0.7em;
+  color: white;
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.6);
 }
 
-.complimentary button a {
+.activeMore {
   color: white;
   background-color: rgb(15, 70, 109);
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
-}
-
-.complimentary button {
-  background-color: rgb(15, 70, 109);
-  border: none;
-  padding: 2em;
   margin: 2em;
 }
 
-.complimentary button a:active {
-  padding: 1em 0 1em 0;
+.activeMore :active {
+  padding: 10em 0.5em 1em 0.5em;
   display: inline-block;
-  background-color: gray;
+  background-color: red;
 }
 
 .half {
@@ -238,36 +232,40 @@ li {
 /* founder section */
 #founder-info {
   display: flex;
-  gap: 2em;
+  gap: 1em;
+  min-width: 20rem;
+}
+
+#founder-img {
+  flex: 0 0 50%;
+}
+
+#founder-img img {
+  width: 100%;
 }
 
 #founder h2,
-.portfolio h2,
 .customer h2 {
   font-size: 3rem;
   font-family: "Poppins", sans-serif;
   color: rgb(15, 23, 42);
 }
 
-.portfolio h2,
-.customer h2 {
-  margin-top: 2em;
-  margin-bottom: 0.2em;
-}
-
 #founder {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  margin-top: 3em;
 }
 
 #founder p {
   color: rgb(69, 79, 94);
-  padding: 0 3rem 0 3rem;
-  font-size: large;
+  margin-top: 0;
+  margin-inline: 4em;
+  font-size: 1.2em;
+  max-width: 30rem;
+  flex: 1;
   text-align: left;
-  max-height: fit-content;
   line-height: 2em;
   margin-top: 0;
 }
@@ -282,7 +280,7 @@ li {
 #quote p {
   font-size: medium;
   line-height: 1.6;
-  max-width: 600px;
+  max-width: 35rem;
   margin: 0 auto 2rem auto;
   color: rgb(69, 79, 94);
   font-family: "Open sans", sans-serif;
@@ -291,16 +289,25 @@ li {
 .portfolioimgs {
   display: flex;
   max-width: 100%;
-  margin: 0 auto;
+  margin: 3em auto;
   justify-content: center;
   gap: 1em;
 }
 
-.portfolioimgs div img {
+.portfolioimgs div {
   max-width: 17em;
+}
+
+.portfolioimgs div img {
+  max-width: 100%;
   max-height: 17em;
 }
 
+.portfolio h2,
+.customer h2 {
+  margin-top: 2em;
+  margin-bottom: 0.3em;
+}
 /* button */
 .explore {
   margin-top: 4em;
@@ -309,10 +316,14 @@ li {
 #explorebutton {
   background-color: rgb(101, 40, 247);
   color: rgb(255, 255, 255);
-  padding: 1rem 3rem 1rem 3rem;
+  padding: 0.8rem 2.1em 0.8rem 2.1rem;
   border-radius: 6px;
   text-decoration: none;
   cursor: pointer;
+  font-size: 1em;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 1em;
 }
 
 #explorebutton:hover {
@@ -453,37 +464,57 @@ hr {
 /* ✅ Responsive stack on small screens */
 @media (max-width: 800px) {
   .info-section,
-  .portfolio p,
+  .portfolio,
   .customer,
   .testimonial {
-    padding: 0 3rem 0 3rem;
+    margin: 0 auto;
+    min-width: 20rem;
+  }
+
+    .portfolio p, .info-text p, .customer-p {
+    margin: 1em auto;
+    max-width: 23rem;
   }
 
   .expertise {
     grid-template-columns: 1fr; /* stack all items */
+    margin: 1em;
   }
 
   .half {
     grid-template-columns: 1fr; /* stack 4 and 5 */
   }
 
-  #founder h2 {
-    margin-top: 0;
+  #founder h2, .portfolio h2, .customer h2 {
+    margin: 0;
+    font-size: xx-large;
   }
 
   #founder-info {
     flex-direction: column;
   }
 
-  #founder,
   .portfolio h2,
   .customer h2 {
     margin-top: 5rem;
   }
 
-  #founder-img img,
-  #founder {
+  #founder-img img {
     width: 100%;
+    object-fit: contain;
+  }
+
+  #founder-img {
+    width: 100%;
+  }
+
+  #founder {
+    margin: 0;
+  }
+  #founder p {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-inline: 1em;
   }
 
   .portfolioimgs,
