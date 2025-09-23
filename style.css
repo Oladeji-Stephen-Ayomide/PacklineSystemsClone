@@ -478,7 +478,7 @@ hr {
 
   .expertise {
     grid-template-columns: 1fr; /* stack all items */
-    margin: 1em;
+    margin: 1rem;
   }
 
   .half {
