@@ -157,14 +157,16 @@ li {
 
 /* info-section */
 .info-section h2,
-#expertise, .portfolio h2 {
+#expertise,
+.portfolio h2 {
   margin: 1em auto 0.6em auto;
   color: rgb(15, 23, 42);
   font-size: 2.7em;
   font-family: "Poppins", sans-serif;
 }
 
-.info-text p, .portfolio p {
+.info-text p,
+.portfolio p {
   font-size: larger;
   line-height: 1.6;
   max-width: 53rem;
@@ -471,7 +473,9 @@ hr {
     min-width: 20rem;
   }
 
-    .portfolio p, .info-text p, .customer-p {
+  .portfolio p,
+  .info-text p,
+  .customer-p {
     margin: 1em auto;
     max-width: 23rem;
   }
@@ -485,18 +489,22 @@ hr {
     grid-template-columns: 1fr; /* stack 4 and 5 */
   }
 
-  #founder h2, .portfolio h2, .customer h2 {
+  .info-section h2,
+  #expertise,
+  #founder h2,
+  .portfolio h2,
+  .customer h2 {
     margin: 0;
     font-size: xx-large;
-  }
-
-  #founder-info {
-    flex-direction: column;
   }
 
   .portfolio h2,
   .customer h2 {
     margin-top: 5rem;
+  }
+    
+  #founder-info {
+    flex-direction: column;
   }
 
   #founder-img img {
