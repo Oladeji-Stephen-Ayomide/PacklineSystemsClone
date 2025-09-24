@@ -218,7 +218,7 @@ li {
   margin: 2em;
 }
 
-.activeMore :active {
+.activeMore:active {
   padding: 10em 0.5em 1em 0.5em;
   display: inline-block;
   background-color: red;
@@ -335,21 +335,26 @@ li {
 /* SVG */
 #svg-container {
   display: flex;
-  flex-direction: row;
+  flex-shrink: 1;
   justify-content: space-around;
   border: 1px rgb(69, 79, 94, 0.205) solid;
-  border-bottom: none;
 }
 
 .svg {
   border-right: 1px rgba(69, 79, 94, 0.205) solid;
-  padding: 2em;
+  padding: 1em;
+  /* min-width: 20rem; */
+  flex: 0 0 0 50%;
+}
+
+.svg svg {
+  width: 100%;
 }
 
 /* TESTIMONAL */
 .testimonial {
   background-color: rgb(242, 240, 254);
-  padding: 6em 0;
+  padding: 3em 0;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -384,7 +389,7 @@ li {
   display: flex;
   justify-content: space-evenly;
   gap: 3rem;
-  padding: 4em 0 4em 0;
+  padding: 4em 1em 4em 1em;
 }
 
 .footer-remark {
@@ -429,6 +434,8 @@ li {
 .socials {
   display: flex;
   flex-direction: column;
+  text-align: left;
+  padding-left: 3em;
   gap: 0;
 }
 
@@ -436,7 +443,9 @@ li {
   display: flex;
   flex-direction: column;
   gap: 0;
+  padding: 0;
 }
+
 
 .company-links li a {
   color: white;
@@ -494,15 +503,10 @@ hr {
   #founder h2,
   .portfolio h2,
   .customer h2 {
-    margin: 0;
+    margin-top: 2em;
     font-size: xx-large;
   }
 
-  .portfolio h2,
-  .customer h2 {
-    margin-top: 5rem;
-  }
-    
   #founder-info {
     flex-direction: column;
   }
@@ -519,6 +523,7 @@ hr {
   #founder {
     margin: 0;
   }
+
   #founder p {
     margin-top: 0;
     margin-bottom: 0;
@@ -540,8 +545,23 @@ hr {
     max-height: 10em;
   }
 
+  /* SVG */
+  #svg-container {
+    display: flex;
+    /* flex-shrink: 1; */
+    justify-content: space-around;
+    border: 1px rgb(69, 79, 94, 0.205) solid;
+  }
+
   .svg {
-    max-width: 50%;
+    border-right: 1px rgba(69, 79, 94, 0.205) solid;
+    padding: 1em;
+    /* min-width: 20rem; */
+    flex: 0 0 0 50%;
+  }
+
+  .svg svg {
+    width: 100%;
   }
 
   .portfolioimgs,
@@ -550,6 +570,13 @@ hr {
     border-radius: 20px;
   }
 
+  #quote p {
+    padding: 2em;
+  }
+
+  .socials {
+    padding: 0;
+  }
   .footer {
     display: flex;
     flex-wrap: wrap;
